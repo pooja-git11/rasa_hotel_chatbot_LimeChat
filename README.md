@@ -1,7 +1,7 @@
 Building a simple chatbot for a hotel, I am using  Rasa framework for this
 
 
-The chatbot should be able to the following basic functionalities
+The chatbot should be able to do the following basic functionalities
 
     Book room
     Request Room Cleaning
