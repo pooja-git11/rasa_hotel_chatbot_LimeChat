@@ -1,0 +1,124 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - book_room
+  - number_of_rooms
+  - check_in_time
+  - check_out_time
+  - cancel_policy
+  - cancel_resevation
+  - simple
+  - deluxe
+  - restaurant
+  - breakfast_timings
+  - breakfast_availability
+  - resturant_timings
+  - clean_the_room
+  - clean_right_away
+
+entities:
+  - number
+  - user_time
+
+slots:
+   number:
+    type: text
+   user_time:
+    type: text
+
+
+responses:
+  utter_greet:
+  - text: "Hii! Welcome to our space, How can i help you?"
+  - text: "Hello, Nice to meet you!"
+  - text: "hii , there"
+  - text: "hey! how may i help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Nice to meet you"
+  - text: "see you soon!"
+  - text: "your welcome!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_for_no_of_room:
+  - text: "How many rooms would you like to book ? "
+  - text: "How many room do you want?"
+  - text: "can you please tell , how many room do you need?"
+
+  utter_ask_for_type_of_room:
+  - text: "What type of room would you like to book?"
+    buttons:
+        -  title: "Simple"
+           payload:  "/simple"
+        -  title: "Deluxe"
+           payload: "/deluxe"
+
+  utter_cnfrm_simple_room:
+    - text: "You have chosen to book {number} simple room"
+
+  utter_cnfrm_delux_room:
+    - text: "You have chosen to book {number} delux room"
+
+  utter_check_in_time:
+    - text: "Check-in time starts at 4PM. Minimum check-in age is 21. Please Contact the reception for early check-in requests"
+
+  utter_check_out_time:
+    - text: "Check-out time is 11 AM. Please Contact the reception for early check-in requests"
+
+
+  utter_cancel_policy:
+    - text: "The booking deposit is refundable if the cancellation occurs at least 15 days before arrival . For cancellations made after this limit, a penalty will be imposed based on the
+              cancellation Policy"
+  utter_cancel_resevation:
+    - text: "To cancel a reservation , select the Reservation link form the homepage.
+            \nOn the Reservation page, under heading 'View , Change or Cancel a Reservation ,' enter your confirmation number, and either the last name of the credit card used to make the
+            reservation. "
+  utter_restaurant:
+    - text: "Yes, the hotel has a restaurant called Zephyr Bar. With our menu we strive to reflect the historic art and the spirit of our neighbourhood by offering a glimpse into what makes our area unique ."
+
+  utter_breakfast_timings:
+    - text: "Monday through Friday breakfast is 6am to 9 am. On saturday and sunday , we are open from 7am to 10:30am"
+
+  utter_breakfast_availability:
+    - text: "The hotel provides its guests with a free made-to-order breakfast each morning"
+
+  utter_resturant_timings:
+    - text: "Our restaurant serves a dazzling 24-hour menu."
+
+  utter_clean_the_room:
+    - text: "When should i arrange for a cleaning?"
+
+  utter_ clean_assur:
+    - text: "Sure, I will send someone to your room right away."
+
+
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_for_no_of_room
+  - utter_ask_for_type_of_room
+  - utter_cnfrm_simple_room
+  - utter_cnfrm_delux_room
+  - utter_check_in_time
+  - utter_check_out_time
+  - utter_restaurant
+  - utter_breakfast_timings
+  - utter_breakfast_availability
+  - utter_resturant_timings
+  - utter_clean_the_room
+  - utter_ clean_assur
+  #- action_hello_world
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

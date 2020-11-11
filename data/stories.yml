@@ -1,0 +1,219 @@
+version: "2.0"
+
+stories:
+
+- story: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+- story: user does not specify number of room, and choosing 1 simple room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: book_room
+    - action: utter_ask_for_no_of_room
+    - intent: number_of_rooms
+      entities:
+        - number: "1"
+    - action: utter_ask_for_type_of_room
+    - intent: simple
+    - action: utter_cnfrm_simple_room
+
+
+- story: user does not specify number of room, and choosing  2 simple room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: book_room
+    - action: utter_ask_for_no_of_room
+    - intent: number_of_rooms
+      entities:
+        - number: "2"
+    - action: utter_ask_for_type_of_room
+    - intent: simple
+    - action: utter_cnfrm_simple_room
+
+- story: user does not specify number of room, and choosing  1 deluxe room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: book_room
+    - action: utter_ask_for_no_of_room
+    - intent: number_of_rooms
+      entities:
+        - number: "1"
+    - action: utter_ask_for_type_of_room
+    - intent: deluxe
+    - action: utter_cnfrm_delux_room
+
+
+- story: user does not specify number of room, and choosing  2 deluxe room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: book_room
+    - action: utter_ask_for_no_of_room
+    - intent: number_of_rooms
+      entities:
+        - number: "2"
+    - action: utter_ask_for_type_of_room
+    - intent: deluxe
+    - action: utter_cnfrm_delux_room
+
+
+
+- story: user specify number of room i.e 1 room, and choosing simple room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: number_of_rooms
+      entities:
+        - number: "1"
+    - action: utter_ask_for_type_of_room
+    - intent: simple
+    - action: utter_cnfrm_simple_room
+
+- story: user specify number of room i.e 2 room, and choosing simple room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: number_of_rooms
+      entities:
+        - number: "2"
+    - action: utter_ask_for_type_of_room
+    - intent: simple
+    - action: utter_cnfrm_simple_room
+
+
+- story: user specify number of room i.e 1 room, and choosing deluxe room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: number_of_rooms
+      entities:
+        - number: "1"
+    - action: utter_ask_for_type_of_room
+    - intent: deluxe
+    - action: utter_cnfrm_delux_room
+
+- story: user specify number of room i.e 2 room, and choosing deluxe room
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: number_of_rooms
+      entities:
+        - number: "2"
+    - action: utter_ask_for_type_of_room
+    - intent: deluxe
+    - action: utter_cnfrm_delux_room
+
+
+- story: FAQ- regarding check-in time
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: check_in_time
+    - action: utter_check_in_time
+    - intent: affirm
+    - action: utter_goodbye
+
+- story: FAQ- regarding check-out time
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: check_out_time
+    - action: utter_check_out_time
+    - intent: affirm
+    - action: utter_goodbye
+
+
+- story: FAQ- regarding cancel resevation
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: cancel_resevation
+    - action: utter_cancel_resevation
+    - intent: affirm
+    - action: utter_goodbye
+
+
+- story: FAQ- regarding cancel policy
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: cancel_policy
+    - action: utter_cancel_policy
+    - intent: affirm
+    - action: utter_goodbye
+
+
+
+- story: FAQ- regarding restaurant
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: restaurant
+    - action: utter_restaurant
+    - intent: affirm
+    - action: utter_goodbye
+
+
+- story: FAQ- regarding breakfast timings
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: breakfast_timings
+    - action: utter_breakfast_timings
+    - intent: affirm
+    - action: utter_goodbye
+
+- story: FAQ- regarding breakfast availability
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: breakfast_availability
+    - action: utter_breakfast_availability
+    - intent: affirm
+    - action: utter_goodbye
+
+- story: FAQ- regarding restaurant timings
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: resturant_timings
+    - action: utter_resturant_timings
+    - intent: affirm
+    - action: utter_goodbye
+
+
+
+- story: Schedule cleaning right away
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: clean_the_room
+    - action: utter_clean_the_room
+    - intent: clean_right_away
+    - action: utter_ clean_assur
+    - intent: affirm
+    - action: utter_goodbye
+
+
+- story: Handle context switch
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: book_room
+    - action: utter_ask_for_no_of_room
+    - active_loop: utter_ask_for_no_of_room
+    - intent: check_out_time                         # - user requests for check-out timings
+    - active_loop: null
+    - action: utter_check_out_time
+    - active_loop: check_out_time
+    - active_loop: null
+    - action: utter_ask_for_no_of_room             #user return to ask_for_no_of_room intent

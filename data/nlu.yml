@@ -1,0 +1,175 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thanks
+    - nice
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - ok
+    - okay
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: book_room
+  examples: |
+   - I want to book  rooms
+   - I would like to book rooms
+   - I want to book rooms for stay
+   - I want to live here
+   - Want to book room
+   - want rooms
+   - need room for stay
+   - want to stay
+   - want room for my people
+
+- intent: number_of_rooms
+  examples: |
+    - [1]{"entity":"number"}
+    - [2]{"entity":"number"}
+    - I want to book [2]{"entity":"number"} room
+    - want to book [1]{"entity":"number"}  room
+    - want to book [2]{"entity":"number"} room
+    - I want to book [1]{"entity":"number"} room
+    - can you check [2]{"entity":"number"}  room is available or not?
+    - want [2]{"entity":"number"} room
+
+- intent: simple
+  examples: |
+    - simple
+    - Simple
+
+- intent: deluxe
+  examples: |
+    - deluxe
+    - Deluxe
+
+- intent: check_in_time
+  examples: |
+    - What are your check-in timings?
+    - can you please tell, check-in timings
+    - what's check-in time ?
+    - check-in time
+
+- intent: check_out_time
+  examples: |
+    - What are your check-out timings?
+    - can you please tell, check-out timings
+    - what's check-out time ?
+    - check-out time
+
+- intent: cancel_policy
+  examples: |
+    - What is your cnacellation policy?
+    - i wnat to cancel my booking, what is your cancellation policy?
+    - do i get refund,  when i cancel my bookings?
+    - what amount will they deduct for cancelling the booking?
+    - what are your cancellation charges?
+
+- intent: cancel_resevation
+  examples: |
+    - How do i cancel a reservation?
+    - How can i canel my resevation?
+    - How can i cancel my bookings?
+    - I want to cancel my reservation
+    - I want to canecl my booking
+    - what is the procedure for cancelling the reservation?
+    - what are your charges for cancelling the booking?
+
+- intent: restaurant
+  examples: |
+    - Does hotel offer breakfast?
+    - is there any resturant?
+    - I am hungry
+    - need some food
+    - want to eat
+
+- intent: breakfast_timings
+  examples: |
+    - What are the breakfast timings?
+    - When i can do breakfast?
+    - when i will get breakfast?
+    - time of breakfast
+    - breakfast time
+
+- intent: breakfast_availability
+  examples: |
+    - Does the offer breakfast?
+    - need  breakfast
+    - want breakfast
+
+
+- intent: resturant_timings
+  examples: |
+    - What are the restaurant timings?
+    - When are the timings of your restaurant?
+    - time of restaurant
+    - restaurant time
+
+- intent: clean_the_room
+  examples: |
+    - I want to have my room cleaned
+    - want my room clean
+    - can you send someone to clean my room
+    - my room is not clean
+
+- intent: clean_right_away
+  examples: |
+    - Could you send someone right now?
+    - right now
+    - as soon as possible
+    - rn
+    - okay send someone!
+
+
+
