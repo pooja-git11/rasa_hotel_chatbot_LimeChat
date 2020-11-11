@@ -4,10 +4,10 @@
 ## The chatbot should be able to do the following basic functionalities
 
 
-   ### Book room
-   ### Request Room Cleaning
-   ### Handle FAQs
-   ### Handle Greetings
+   #####              Book room
+   #####              Request Room Cleaning
+   #####              Handle FAQs
+   #####              Handle Greetings
     
 
 
