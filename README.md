@@ -1,18 +1,19 @@
-#Building a simple chatbot for a hotel, I am using  Rasa framework for this
+# Building a simple chatbot for a hotel, I am using  Rasa framework for this
 
 
-##The chatbot should be able to do the following basic functionalities
+## The chatbot should be able to do the following basic functionalities
 
-    ###Book room
-    ###Request Room Cleaning
-    ###Handle FAQs
-    ###Handle Greetings
+
+   ### Book room
+   ### Request Room Cleaning
+   ### Handle FAQs
+   ### Handle Greetings
     
 
 
-##Flows
+## Flows
 
-###Book Room
+### Book Room
 
 User: I want to book a room.
 
@@ -52,8 +53,8 @@ Bot: Sure, I have scheduled a cleaning for 5 pm today.
 
 The above two flows are the only multi-step flows. The flows should adapt themselves according to the user input. For eg., if the user says "I want to book a room for 2 people", the bot should not ask "How many rooms would you like to book?".
 
-###FAQs
-####Check-in timings -
+### FAQs
+#### Check-in timings -
 
 User: What are your check-in timings?
 
