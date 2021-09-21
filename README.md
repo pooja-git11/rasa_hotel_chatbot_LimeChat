@@ -1,7 +1,7 @@
 # Building a simple chatbot for a hotel, I am using  Rasa framework for this
 
 
-## The chatbot should be able to do the following basic functionalities
+## The chatbot is able to do the following basic functionalities
 
 
    #####              Book room
@@ -135,5 +135,3 @@ Bot: You have chosen to book 2 simple rooms
 Please note that the flows below are only meant as examples to demonstrate functionalities. We would expect the bot to also handle questions having the same meaning but posed in different ways.
 
 For eg. in our Book Room example, we have the user say "I want to book a room". In this case, the bot should also be able to direct the user to this flow if he says something along the lines of "I would like to book a room", "I want to book a room for my stay" etc.
-
-Please add at least 5 training examples for each intent so that the bot is able to handle.
